@@ -58,6 +58,7 @@
     <Compile Include="Interfaces\IRepositorio.cs" />
     <Compile Include="Interfaces\ObjetoValor.cs" />
     <Compile Include="Interfaces\RepositorioNHibernate.cs" />
+    <Compile Include="Padroes\Estrategia.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

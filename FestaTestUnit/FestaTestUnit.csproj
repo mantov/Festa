@@ -60,6 +60,7 @@
     <Compile Include="Stubs\PessoaStub.cs" />
     <Compile Include="CpfTest.cs" />
     <Compile Include="EnderecoTeste.cs" />
+    <Compile Include="EstrategiaTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

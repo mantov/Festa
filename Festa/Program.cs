@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using Entidades.Padroes;
 using FestaTestUnit;
 using FestaTestUnit.Stubs;
 
@@ -39,6 +40,9 @@ namespace Festa
                 }
             }
             Console.WriteLine(pessoa.ToString());
+            Console.WriteLine(Estrategia.Agradeca("par de meias",new Efusivo()));
+            Console.WriteLine(Estrategia.Agradeca("par de meias", new Discreto()));
+            Console.WriteLine(Estrategia.Agradeca("par de meias", new Sarcastico()));
             Console.ReadLine();
         }
     }
