@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entidades.Padroes
+﻿namespace Entidades.Padroes
 {
     public static class Estrategia 
     {
-        public static string Agradeca(string presente, Agradecimento agradecimento)
+        public static string Agradeca(string presente, IAgradecimento agradecimento)
         {
             return agradecimento.RespostaAoRecebimento(presente);
         }
     }
 
-    public class Efusivo : Agradecimento
+    public class Efusivo : IAgradecimento
     {
         public string RespostaAoRecebimento(string presente)
         {
@@ -24,7 +17,7 @@ namespace Entidades.Padroes
         }
     }
 
-    public class Discreto : Agradecimento
+    public class Discreto : IAgradecimento
     {
         public string RespostaAoRecebimento(string presente)
         {
@@ -33,7 +26,7 @@ namespace Entidades.Padroes
         }
     }
 
-    public class Sarcastico : Agradecimento
+    public class Sarcastico : IAgradecimento
     {
         public string RespostaAoRecebimento(string presente)
         {
@@ -42,8 +35,7 @@ namespace Entidades.Padroes
         }
     }
 
-
-    public interface Agradecimento
+    public interface IAgradecimento
     {
         string RespostaAoRecebimento(string presente);
     }

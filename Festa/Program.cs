@@ -19,7 +19,7 @@ namespace Festa
             {
                 var pessoa = PessoaStub.GetInstance(0);
                 var listaCpf = CpfStub.GetInstances();
-            
+
                 ImprimeSaida(listaCpf, pessoa);
             }
             catch (Exception e)
@@ -40,9 +40,13 @@ namespace Festa
                 }
             }
             Console.WriteLine(pessoa.ToString());
-            Console.WriteLine(Estrategia.Agradeca("par de meias",new Efusivo()));
+            Console.WriteLine(Estrategia.Agradeca("par de meias", new Efusivo()));
             Console.WriteLine(Estrategia.Agradeca("par de meias", new Discreto()));
             Console.WriteLine(Estrategia.Agradeca("par de meias", new Sarcastico()));
+            
+            ObservadorHardCore.Executa();
+            ObservadorSoftCore.Executa();
+
             Console.ReadLine();
         }
     }
